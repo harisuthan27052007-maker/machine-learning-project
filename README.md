@@ -1,73 +1,75 @@
-# Computer Vision Roadmap
-This repository contains the process I am following to learn Computer Vision. I am starting from the very beginning, so the level of projects would behind from most basic and hopefully become somewhat advanced as this repository evolves. Follow along if you are keen to explore the fantastic projects you can make using Computer Vision capabilities along with Deep Learning.
+# Computer Vision & Deep Learning Roadmap
 
-# Requirements for Face Detection
-1. Download [Anaconda](https://anaconda.org)
-2. Download the [Installation](https://github.com/manvimadan12/Computer_Vision_Roadmap/tree/main/Face%20Recognition/Installations) files from the [Face Detection](https://github.com/manvimadan12/Computer_Vision_Roadmap/tree/main/Face%20Recognition) folder in the repository
-3. Mac and Linux users, fire up the terminal. Windows users can open Anaconda Prompt after downloading Anaconda
-4. Navigate to the folder with installation files using cd command
-5. Run this command for setting up dependencies on Mac: `conda env create -f virtual_platform_mac.yml` 
-6. Windows and Linux users can run the same command as `conda env create -f virtual_platform_windows.yml` and `conda env create -f virtual_platform_linux.yml` , respectively. 
-7. This will setup a virtual_platform on your system with all the dependencies 
-8. Go to Anaconda application on your machine and on the top left where you can see root, select Virtual_Platform from the drop down list
-9. Download the 2 xml files, namely  haarcascade_eye.xml and harcascade_frontalface_default.xml to a known location on your machine.
-10. Change the reference location of these 2 xml files while running the face_detection.py script
+A structured collection of Computer Vision and Deep Learning projects, ranging from foundational Convolutional Neural Networks (CNNs) to real-time object detection and Generative Adversarial Networks (GANs)[cite: 2, 7].
 
-# Requirements for Object Detection
+---
 
-1. Download [Anaconda](https://anaconda.org)
-2. Download the [Installation](https://github.com/manvimadan12/Computer_Vision_Roadmap/tree/main/Face%20Recognition/Installations) files from the [Face Detection](https://github.com/manvimadan12/Computer_Vision_Roadmap/tree/main/Face%20Recognition) folder in the repository
-3. Mac and Linux users, fire up the terminal. Windows users can open Anaconda Prompt after downloading Anaconda
-4. Navigate to the folder with installation files using cd command
-5. Run this command for setting up dependencies on Mac: `conda env create -f virtual_platform_mac.yml` 
-6. Windows and Linux users can run the same command as `conda env create -f virtual_platform_windows.yml` and `conda env create -f virtual_platform_linux.yml` , respectively. 
-7. This will setup a virtual_platform on your system with all the dependencies 
-8. Go to Anaconda application on your machine and on the top left where you can see root, select Virtual_Platform from the drop down list
-9. Take all the files inside the Object Detection folder from Github Repository and upload them onto jupyter notebook home. ( all the files except Output, obviously!)
-10. Now run the cells one-by-one in the Object Detection jupyter notebook.
-11. You will see an output file being generated. Open the file and enjoy the video! 
+## 📂 Repository Contents
 
-# Requirements for Real time Object Detection
-1. Download [Anaconda](https://anaconda.org)
-2. Download the [Installation](https://github.com/manvimadan12/Computer_Vision_Roadmap/tree/main/Face%20Recognition/Installations) files from the [Face Detection](https://github.com/manvimadan12/Computer_Vision_Roadmap/tree/main/Face%20Recognition) folder in the repository
-3. Mac and Linux users, fire up the terminal. Windows users can open Anaconda Prompt after downloading Anaconda
-4. Navigate to the folder with installation files using cd command
-5. Run this command for setting up dependencies on Mac: `conda env create -f virtual_platform_mac.yml` 
-6. Windows and Linux users can run the same command as `conda env create -f virtual_platform_windows.yml` and `conda env create -f virtual_platform_linux.yml` , respectively. 
-7. This will setup a virtual_platform on your system with all the dependencies 
-8. Go to Anaconda application on your machine and on the top left where you can see root, select Virtual_Platform from the drop down list
-9. Download data by following the steps given here: [cifar-dataset](http://www.cs.toronto.edu/~kriz/cifar.html)
-10. Save the data in a folder in Jupyter notebooks. Name the folder 'data_for_gan'
-# Results
+* **`cats_vs_dogs_challenge.py`**: A binary image classification Convolutional Neural Network built with Keras (`Sequential`, `Conv2D`, `MaxPooling2D`) using `ImageDataGenerator` for data augmentation (shearing, zooming, horizontal flipping) to classify images of cats and dogs[cite: 3].
+* **`MNIST_Convnet.py`**: A multi-class image classification CNN built with Keras trained on the MNIST handwritten digits dataset (`28x28` grayscale images across 10 classes)[cite: 5].
+* **`Face Recognition/`**: Real-time face and eye detection using OpenCV and Haar Cascade classifiers (`haarcascade_frontalface_default.xml`, `haarcascade_eye.xml`)[cite: 2, 7].
+* **`Object Detection/`**: Real-time object detection in video streams utilizing Single Shot MultiBox Detector (SSD)[cite: 2, 7].
+* **`GANs/`**: Generative Adversarial Network implementation trained on the CIFAR dataset to generate synthetic images[cite: 2, 6, 7].
 
-1. Face Detection
-![Face detection](https://github.com/manvimadan12/Computer_Vision_Roadmap/blob/main/Face%20Recognition/Results/Screen%20Shot%201.png "Face detection")
-![Face and eyes Detection](https://github.com/manvimadan12/Computer_Vision_Roadmap/blob/main/Face%20Recognition/Results/Screen%20Shot%202.png "Face and eyes Detection")
+---
 
-2. Real- Time Object Detection 
-![Real Time Object Detection](https://github.com/manvimadan12/Computer_Vision_Roadmap/blob/main/Object%20Detection/Output/Object_detection_output_snip.png)
-[Output Video](https://github.com/manvimadan12/Computer_Vision_Roadmap/blob/main/Object%20Detection/Output/output.mp4)
+## 🛠️ Environment Setup (Anaconda)
 
-3. Generative Adversarial Network
-![Fake Images generated by GAN](https://github.com/manvimadan12/Computer_Vision_Roadmap/blob/main/GANs/results/fake_samples_epoch_024.png)
+1. Download and install [Anaconda](https://anaconda.org)[cite: 7].
+2. Download the environment configuration files from the `Face Recognition/Installations` folder[cite: 7].
+3. Open your Terminal (macOS/Linux) or Anaconda Prompt (Windows), navigate to the folder containing the `.yml` files, and create the Conda environment[cite: 7]:
+   * **macOS:**
+     ```bash
+     conda env create -f virtual_platform_mac.yml
+     ```
+   * **Windows:**
+     ```bash
+     conda env create -f virtual_platform_windows.yml
+     ```
+   * **Linux:**
+     ```bash
+     conda env create -f virtual_platform_linux.yml
+     ```
+4. Activate the `Virtual_Platform` environment via Anaconda Navigator or terminal[cite: 7].
 
+---
 
-# Books
-* [Deep Learning with Python](https://www.manning.com/books/deep-learning-with-python) 
-* [Deep Learning by Ian Goodfellow and Yoshua Benjio and Aaron Cornville](https://www.deeplearningbook.org)
+## 🚀 Usage Instructions
 
-# Courses
-* [Deep Learning and Computer Vision A-Z](https://www.udemy.com/course/computer-vision-a-z/)
+### 1. Cats vs. Dogs Classifier (`cats_vs_dogs_challenge.py`)
+* Organize your dataset into `training_set` and `test_set` directories[cite: 3].
+* Update `training_data_path`, `test_data_path`, and the single prediction image path (`cat_or_dog_1.jpg`) in the script[cite: 3].
+* Run the script to train the 2-layer CNN (`64x64x3` input) over 25 epochs and run inference[cite: 3].
 
-# Interesting Blog Posts
-* Everything you need to know about Computer Vision - [Link](https://towardsdatascience.com/everything-you-ever-wanted-to-know-about-computer-vision-heres-a-look-why-it-s-so-awesome-e8a58dfb641e)
-* Viola Jones Algorithm for face detection - [Link](https://towardsdatascience.com/the-intuition-behind-facial-detection-the-viola-jones-algorithm-29d9106b6999)
-* OpenCV3 Object Detection - [Link](https://www.bogotobogo.com/python/OpenCV_Python/python_opencv3_Image_Object_Detection_Face_Detection_Haar_Cascade_Classifiers.php)
-* SSD - [Link](https://jonathan-hui.medium.com/ssd-object-detection-single-shot-multibox-detector-for-real-time-processing-9bd8deac0e06)
-* GANs - [Link](https://hackernoon.com/how-do-gans-intuitively-work-2dda07f247a1)
+### 2. MNIST Digit Recognition (`MNIST_Convnet.py`)
+* Run the script directly; Keras automatically downloads the MNIST dataset, normalizes pixel values, and trains a 3-layer CNN (`28x28x1` input) for 5 epochs[cite: 5].
 
-# Research Papers
-* [SSD](https://github.com/manvimadan12/ML-Research-Papers-/blob/master/Computer%20Vision/1512.02325.pdf)
-* [Viola Jones](https://github.com/manvimadan12/ML-Research-Papers-/blob/master/Computer%20Vision/Rapid%20Object%20Detection.pdf)
-* [GANs](https://github.com/manvimadan12/ML-Research-Papers-/blob/master/Computer%20Vision/GANs.pdf)
+### 3. Face & Eye Detection (`Face Recognition/`)
+* Download `haarcascade_eye.xml` and `haarcascade_frontalface_default.xml`[cite: 7].
+* Update the XML file paths inside `face_detection.py` and run the script[cite: 7].
 
+### 4. Object Detection (`Object Detection/`)
+* Upload the files from the `Object Detection` directory to Jupyter Notebook and run all cells sequentially to generate the annotated output video[cite: 7].
+
+### 5. Generative Adversarial Networks (`GANs/`)
+* Download the CIFAR dataset from the [official source](http://www.cs.toronto.edu/~kriz/cifar.html)[cite: 6, 7].
+* Save the extracted dataset into a folder named `data_for_gan` in your Jupyter working directory before running the notebook[cite: 7].
+
+---
+
+## 📊 Sample Results
+
+| Task | Preview / Output |
+| :--- | :--- |
+| **Face & Eye Detection** | ![Face Detection](https://github.com/manvimadan12/Computer_Vision_Roadmap/blob/main/Face%20Recognition/Results/Screen%20Shot%201.png) ![Face and Eyes Detection](https://github.com/manvimadan12/Computer_Vision_Roadmap/blob/main/Face%20Recognition/Results/Screen%20Shot%202.png)[cite: 7] |
+| **Real-Time Object Detection** | ![Object Detection](https://github.com/manvimadan12/Computer_Vision_Roadmap/blob/main/Object%20Detection/Output/Object_detection_output_snip.png) • [Watch Output Video](https://github.com/manvimadan12/Computer_Vision_Roadmap/blob/main/Object%20Detection/Output/output.mp4)[cite: 7] |
+| **GAN Image Generation** | ![GAN Output](https://github.com/manvimadan12/Computer_Vision_Roadmap/blob/main/GANs/results/fake_samples_epoch_024.png)[cite: 7] |
+
+---
+
+## 📚 References & Further Reading
+
+* **Books:** [Deep Learning with Python](https://www.manning.com/books/deep-learning-with-python) • [Deep Learning (Goodfellow, Bengio, Courville)](https://www.deeplearningbook.org)[cite: 7]
+* **Courses:** [Deep Learning and Computer Vision A-Z](https://www.udemy.com/course/computer-vision-a-z/)[cite: 7]
+* **Papers:** [Viola-Jones Face Detection](https://github.com/manvimadan12/ML-Research-Papers-/blob/master/Computer%20Vision/Rapid%20Object%20Detection.pdf) • [Single Shot MultiBox Detector (SSD)](https://github.com/manvimadan12/ML-Research-Papers-/blob/master/Computer%20Vision/1512.02325.pdf) • [Generative Adversarial Networks (GANs)](
